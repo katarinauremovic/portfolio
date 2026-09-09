@@ -673,7 +673,7 @@ export default function Home() {
           </p>
 
           <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
-            Interested in working together or learning more about my projects?
+            Let's connect
           </h2>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
