@@ -3,19 +3,30 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#111111]">
+      {/* NAVIGATION */}
       <nav className="fixed left-0 top-0 z-50 w-full border-b border-gray-200 bg-[#f7f7f5]/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
           <a href="#" className="font-semibold">
             Katarina Uremović
           </a>
 
-          <div className="flex gap-5 text-sm text-gray-600">
+          <div className="hidden items-center gap-8 text-sm text-gray-600 md:flex">
             <a href="#about" className="transition hover:text-black">
               About
             </a>
 
-            <a href="#projects" className="transition hover:text-black">
-              Projects
+            <a
+              href="#personal-projects"
+              className="transition hover:text-black"
+            >
+              Personal Projects
+            </a>
+
+            <a
+              href="#university-projects"
+              className="transition hover:text-black"
+            >
+              University Projects
             </a>
 
             <a href="#contact" className="transition hover:text-black">
@@ -25,8 +36,8 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* HERO */}
       <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-10">
-
         <div>
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
             Portfolio
@@ -45,13 +56,12 @@ export default function Home() {
           </h2>
 
           <p className="mt-5 max-w-xl text-lg leading-8 text-gray-600">
-            I enjoy building useful solutions by combining software,
-            automation and AI.
+            I enjoy exploring different areas of IT, learning new technologies and applying them to practical projects.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#projects"
+              href="#personal-projects"
               className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
             >
               View My Projects
@@ -69,7 +79,7 @@ export default function Home() {
         <div className="flex justify-center md:justify-end">
           <Image
             src="/moja_slika.png"
-            alt="Ime Prezime"
+            alt="Katarina Uremović"
             width={400}
             height={500}
             className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
@@ -77,11 +87,13 @@ export default function Home() {
           />
         </div>
       </section>
+
+
+      {/* ABOUT */}
       <section
         id="about"
         className="mx-auto max-w-6xl px-6 py-24 md:px-10"
       >
-        {/* ABOUT ME */}
         <div className="grid gap-12 md:grid-cols-2">
           <div>
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
@@ -91,27 +103,37 @@ export default function Home() {
             <h2 className="text-4xl font-semibold leading-tight md:text-5xl">
               Curious about technology.
               <br />
-              Focused on practical solutions.
+              Ready to apply my knowledge in practice.
             </h2>
           </div>
 
           <div className="flex flex-col justify-center">
             <p className="text-lg leading-8 text-gray-600">
               I am a Bachelor of Informatics currently pursuing a Master's degree
-              focused on databases and knowledge bases. My background includes
-              software development, databases and building digital solutions.
+              focused on databases and knowledge bases. Through my studies, I have
+              gained a foundation in software development, databases and other areas
+              of information technology.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              Recently, I have been exploring AI and automation through hands-on
-              projects, combining web applications, databases, APIs and automation
-              workflows to build useful end-to-end solutions.
+              Alongside my studies, I started working on personal projects inspired
+              by real business needs. These projects gave me the opportunity to
+              apply my knowledge in practice and explore how technology can be used
+              to solve real problems, improve existing processes and support
+              everyday business activities.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              I enjoy learning new technologies by applying them to real-world
-              problems, especially where technology can reduce repetitive work,
-              improve existing processes and support people in their everyday work.
+              Working on practical projects strengthened my motivation to take the
+              next step toward professional work in IT. I am interested in applying
+              my knowledge in a professional environment, gaining hands-on
+              experience and contributing to real projects.
+            </p>
+
+            <p className="mt-5 text-lg leading-8 text-gray-600">
+              I am open to different opportunities within IT that match my current
+              knowledge and skills, where I can continue learning, contribute to a
+              team and further develop my technical experience.
             </p>
           </div>
         </div>
@@ -137,13 +159,13 @@ export default function Home() {
                 {[
                   "C#",
                   ".NET",
-                  "TypeScript",
-                  "JavaScript",
-                  "Next.js",
-                  "React",
-                  "PHP",
-                  "Kotlin",
                   "Python",
+                  "Kotlin",
+                  "JavaScript",
+                  "TypeScript",
+                  "PHP",
+                  "React",
+                  "Next.js",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -155,20 +177,72 @@ export default function Home() {
               </div>
             </div>
 
-            {/* DATA & BACKEND */}
+            {/* DATABASES & BACKEND */}
             <div className="rounded-2xl border border-gray-200 bg-white p-6">
               <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                Data & Backend
+                Databases & Backend
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   "PostgreSQL",
                   "SQL",
+                  "PostGIS",
+                  "JSONB",
                   "Supabase",
+                  "Firebase",
+                  "Cloud Firestore",
+                  "PL/pgSQL",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* TESTING & QA */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
+                Testing & QA
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {[
+                  "Unit Testing",
+                  "Integration Testing",
+                  "UI Testing",
+                  "JUnit 4",
+                  "Mockito",
+                  "Espresso",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* WEB & APIs */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
+                Web & APIs
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {[
                   "REST APIs",
                   "HTTP",
                   "JSON",
+                  "Webhooks",
+                  "WordPress",
+                  "WPForms",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -190,7 +264,6 @@ export default function Home() {
                 {[
                   "n8n",
                   "OpenAI / LLM",
-                  "Webhooks",
                   "Structured Outputs",
                   "Workflow Automation",
                   "Human-in-the-Loop",
@@ -215,11 +288,9 @@ export default function Home() {
                 {[
                   "Git",
                   "GitHub",
-                  "WordPress",
-                  "WPForms",
+                  "Android Studio",
                   "Figma",
                   "Vercel",
-                  "CyberFolks",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -233,8 +304,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* PERSONAL PROJECTS */}
       <section
-        id="projects"
+        id="personal-projects"
         className="mx-auto max-w-6xl px-6 py-24 md:px-10"
       >
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
@@ -242,427 +315,686 @@ export default function Home() {
         </p>
 
         <h2 className="text-4xl font-semibold md:text-5xl">
-          Featured Projects
+          Personal Projects
         </h2>
 
         <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-          A selection of projects where I explored practical solutions for real
-          business processes using software, automation and AI.
+          Projects inspired by real business needs, developed to explore how technology can solve practical problems and improve existing processes.
         </p>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
-          <div className="flex flex-col gap-8">
-            <div>
-              <p className="text-sm font-medium text-gray-400">01 — WEB APPLICATION</p>
-
-              <h3 className="mt-3 text-3xl font-semibold">
-                Quote Management Web Application
-              </h3>
-
-              <p className="mt-3 max-w-2xl text-lg text-gray-600">
-                Web application for creating, managing and finalizing customer quotes.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2">
+        <div className="mt-12 space-y-8">
+          {/* PERSONAL PROJECT 1 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
               <div>
-                <h4 className="font-semibold">The Problem</h4>
-                <p className="mt-3 leading-7 text-gray-600">
-                  Small businesses often manage customer quotes manually, which can
-                  make it difficult to keep customer information, quote items, pricing
-                  and quote statuses organized.
+                <p className="text-sm font-medium text-gray-400">
+                  01 — WEB APPLICATION
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold">
+                  Quote Management Web Application
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Web application for creating, managing and finalizing
+                  customer quotes.
                 </p>
               </div>
 
-              <div>
-                <h4 className="font-semibold">The Solution</h4>
-                <p className="mt-3 leading-7 text-gray-600">
-                  I built a web application that centralizes the quote creation and
-                  management process. Users can create quotes, add multiple items,
-                  calculate totals, edit drafts and finalize completed quotes.
-                </p>
-              </div>
-            </div>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
 
-            <div>
-              <h4 className="font-semibold">Key Features</h4>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  "Quote Management",
-                  "Multiple Quote Items",
-                  "Automatic Totals",
-                  "Quote Numbering",
-                  "DRAFT → FINAL Workflow",
-                  "PDF Generation",
-                  "Authentication",
-                  "Row Level Security",
-                  "Responsive Design",
-                  "PWA",
-                ].map((feature) => (
-                  <span
-                    key={feature}
-                    className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold">Technologies</h4>
-
-              <p className="mt-3 leading-7 text-gray-600">
-                Next.js · TypeScript · Tailwind CSS · Supabase · PostgreSQL ·
-                Supabase Auth · Row Level Security · React PDF · Git · GitHub · Vercel
-              </p>
-            </div>
-
-            <div>
-              <h4 className="mb-5 font-semibold">Application Preview</h4>
-
-              <div className="flex flex-wrap items-start justify-center gap-4">
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt1_1.png"
-                    alt="Quote management application dashboard"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto object-contain"
-                  />
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The application centralizes the quote creation process and
+                    helps keep customer information, quote items, pricing and
+                    quote statuses organized in one place.
+                  </p>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt1_2.png"
-                    alt="Customer quote detail view"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto object-contain"
-                  />
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    I built the application with Next.js and TypeScript,
+                    connected it to a PostgreSQL database through Supabase and
+                    implemented authentication and Row Level Security to
+                    protect user data. Quotes can also be generated as PDF
+                    documents.
+                  </p>
                 </div>
-
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt1_4.png"
-                    alt="New quote creation form"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
-          <div className="flex flex-col gap-8">
-            <div>
-              <p className="text-sm font-medium text-gray-400">
-                02 — AI AUTOMATION
-              </p>
-
-              <h3 className="mt-3 text-3xl font-semibold">
-                AI Lead-to-Quote Automation
-              </h3>
-
-              <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                End-to-end AI workflow that transforms unstructured website inquiries
-                into structured, human-reviewed quote drafts.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              <div>
-                <h4 className="font-semibold">The Problem</h4>
-
-                <p className="mt-3 leading-7 text-gray-600">
-                  Customer inquiries submitted through a website often contain
-                  important quote information in unstructured natural language.
-                  Manually reading each inquiry, identifying products, dimensions and
-                  quantities, and transferring that information into a quote is
-                  repetitive and time-consuming.
-                </p>
               </div>
 
               <div>
-                <h4 className="font-semibold">The Solution</h4>
+                <h4 className="font-semibold">Key Features</h4>
 
-                <p className="mt-3 leading-7 text-gray-600">
-                  I built an AI-powered automation workflow that connects a WordPress
-                  contact form with n8n, OpenAI, Supabase and my quote management
-                  application. AI extracts structured information from customer
-                  messages, while validation logic identifies incomplete data and
-                  sends it for human review.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold">Workflow</h4>
-
-              <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
-                {[
-                  "WordPress Form",
-                  "Webhook",
-                  "n8n",
-                  "AI Extraction",
-                  "Validation",
-                  "Supabase",
-                  "Human Review",
-                  "Quote Draft",
-                ].map((step, index, array) => (
-                  <div key={step} className="flex items-center gap-2">
-                    <span className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2">
-                      {step}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Authentication",
+                    "Customer Management",
+                    "Quote Creation",
+                    "Quote Items",
+                    "Status Tracking",
+                    "PDF Generation",
+                    "Database Integration",
+                    "Row Level Security",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
                     </span>
-
-                    {index < array.length - 1 && (
-                      <span className="text-gray-400">→</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-xl bg-gray-50 p-6">
-              <p className="text-sm font-medium uppercase tracking-wider text-gray-500">
-                Human-in-the-Loop
-              </p>
-
-              <p className="mt-3 max-w-3xl leading-7 text-gray-700">
-                AI is used to extract information and reduce repetitive manual work,
-                but it does not invent missing data or determine prices. Incomplete
-                information is flagged for human review, and pricing remains under
-                human control.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold">Key Features</h4>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  "AI Information Extraction",
-                  "Structured Output",
-                  "Multi-Item Inquiries",
-                  "Automated Validation",
-                  "NEW / NEEDS_REVIEW",
-                  "Human-in-the-Loop",
-                  "Supabase Integration",
-                  "Quote Prefill",
-                  "Human-Controlled Pricing",
-                ].map((feature) => (
-                  <span
-                    key={feature}
-                    className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold">Technologies</h4>
-
-              <p className="mt-3 leading-7 text-gray-600">
-                n8n · OpenAI / LLM · Structured Outputs · WordPress · WPForms · PHP ·
-                Webhooks · HTTP · JSON · Supabase · PostgreSQL · Next.js · TypeScript
-              </p>
-            </div>
-
-            <div>
-              <h4 className="mb-2 font-semibold">Automation in Action</h4>
-
-              <p className="mb-6 max-w-3xl leading-7 text-gray-600">
-                From a customer inquiry submitted on the website to AI extraction,
-                validation, human review and a prefilled quote draft.
-              </p>
-
-              <div className="space-y-8">
-                <div>
-                  <p className="mb-3 text-sm font-medium text-gray-500">
-                    01 — Customer inquiry
-                  </p>
-
-                  <div className="flex justify-center overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                    <Image
-                      src="/projekt2_wordpress.png"
-                      alt="Customer inquiry submitted through the WordPress website"
-                      width={1200}
-                      height={800}
-                      className="h-72 w-auto max-w-full object-contain"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <p className="mb-3 text-sm font-medium text-gray-500">
-                    02 — AI processing and validation in n8n
-                  </p>
-
-                  <div className="flex justify-center overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                    <Image
-                      src="/projekt2_workflow.png"
-                      alt="n8n AI automation workflow"
-                      width={1600}
-                      height={900}
-                      className="h-72 w-auto max-w-full object-contain"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <p className="mb-3 text-sm font-medium text-gray-500">
-                    03 — Human review
-                  </p>
-
-                  <div className="flex flex-wrap items-start justify-center gap-4">
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                      <Image
-                        src="/projekt2_1.png"
-                        alt="Inquiry flagged for human review"
-                        width={1000}
-                        height={800}
-                        className="h-64 w-auto max-w-full object-contain"
-                      />
-                    </div>
-
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                      <Image
-                        src="/projekt2_2.png"
-                        alt="AI extracted inquiry items with missing data marked for review"
-                        width={1000}
-                        height={800}
-                        className="h-64 w-auto max-w-full object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="mb-3 text-sm font-medium text-gray-500">
-                    04 — Prefilled quote with human-controlled pricing
-                  </p>
-
-                  <div className="flex flex-wrap items-start justify-center gap-4">
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                      <Image
-                        src="/projekt2_3.png"
-                        alt="Quote form automatically prefilled from customer inquiry"
-                        width={1000}
-                        height={800}
-                        className="h-64 w-auto max-w-full object-contain"
-                      />
-                    </div>
-
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2">
-                      <Image
-                        src="/projekt2_4.png"
-                        alt="Missing dimensions and pricing left for human input"
-                        width={1000}
-                        height={800}
-                        className="h-64 w-auto max-w-full object-contain"
-                      />
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
-          <div className="flex flex-col gap-8">
-            <div>
-              <p className="text-sm font-medium text-gray-400">
-                03 — WORDPRESS WEBSITE
-              </p>
-
-              <h3 className="mt-3 text-3xl font-semibold">
-                WordPress Business Website
-              </h3>
-
-              <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                Responsive business website created for a joinery business to present
-                the company, its products and provide customers with an easy way to
-                submit inquiries.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2">
               <div>
-                <h4 className="font-semibold">The Website</h4>
+                <h4 className="font-semibold">Technologies</h4>
 
                 <p className="mt-3 leading-7 text-gray-600">
-                  The website provides customers with information about the business
-                  and its product offering, together with a contact form for submitting
-                  customer inquiries.
+                  Next.js · TypeScript · Tailwind CSS · Supabase · PostgreSQL ·
+                  Authentication · Row Level Security · React PDF · Git ·
+                  GitHub · Vercel
                 </p>
               </div>
 
               <div>
-                <h4 className="font-semibold">AI Integration</h4>
+                <h4 className="mb-5 font-semibold">Application Preview</h4>
 
-                <p className="mt-3 leading-7 text-gray-600">
-                  The inquiry form was later connected to my AI Lead-to-Quote
-                  Automation, allowing submitted customer messages to automatically
-                  enter the AI processing, validation and quote preparation workflow.
+                <div className="flex flex-wrap items-start justify-center gap-4">
+                  {[
+                    {
+                      src: "/projekt1_1.png",
+                      alt: "Quote management application dashboard",
+                    },
+                    {
+                      src: "/projekt1_2.png",
+                      alt: "Quote management application",
+                    },
+                    {
+                      src: "/projekt1_4.png",
+                      alt: "Quote details",
+                    },
+                  ].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={1400}
+                        height={900}
+                        className="h-64 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* PERSONAL PROJECT 2 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  02 — AI AUTOMATION
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold">
+                  AI Lead-to-Quote Automation
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  AI-powered workflow that transforms unstructured customer
+                  inquiries into structured data and prepares quote drafts for
+                  human review.
                 </p>
               </div>
-            </div>
 
-            <div>
-              <h4 className="font-semibold">Website Preview</h4>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
 
-              <div className="mt-5 flex flex-wrap items-start justify-center gap-4">
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt3_1.png"
-                    alt="WordPress business website homepage"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto max-w-full object-contain"
-                  />
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The workflow automates the processing of customer inquiries
+                    that would otherwise require manual extraction of product
+                    information, dimensions, quantities and contact details
+                    before preparing a quote.
+                  </p>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt3_2.png"
-                    alt="Product offering on the WordPress business website"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto max-w-full object-contain"
-                  />
-                </div>
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
 
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                  <Image
-                    src="/projekt2_wordpress.png"
-                    alt="Customer inquiry form integrated with the AI automation"
-                    width={1200}
-                    height={800}
-                    className="h-64 w-auto max-w-full object-contain"
-                  />
+                  <p className="mt-3 leading-7 text-gray-600">
+                    Customer inquiries are received from a WordPress form
+                    through a webhook and processed in n8n. AI extracts
+                    structured information, the output is validated and stored
+                    in Supabase, while uncertain or missing information remains
+                    available for human review.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Customer Inquiry",
+                    "Webhook Integration",
+                    "AI Extraction",
+                    "Structured Outputs",
+                    "Data Validation",
+                    "Database Storage",
+                    "Human Review",
+                    "Quote Draft",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+
+                <p className="mt-3 leading-7 text-gray-600">
+                  n8n · OpenAI / LLM · Structured Outputs · WordPress ·
+                  WPForms · PHP · Webhooks · HTTP · JSON · Supabase ·
+                  PostgreSQL · Next.js · TypeScript
+                </p>
+              </div>
+
+              <div>
+                <h4 className="mb-2 font-semibold">Application Preview</h4>
+
+                <p className="mb-6 max-w-3xl leading-7 text-gray-600">
+                  From a customer inquiry submitted on the website to AI processing and a
+                  prefilled quote ready for human review.
+                </p>
+
+                <div className="flex flex-wrap items-start justify-center gap-4">
+                  {[
+                    {
+                      src: "/projekt2_wordpress.png",
+                      alt: "Customer inquiry submitted through WordPress",
+                    },
+                    {
+                      src: "/projekt2_workflow.png",
+                      alt: "n8n AI automation workflow",
+                    },
+                    {
+                      src: "/projekt2_3.png",
+                      alt: "Prefilled quote generated from the customer inquiry",
+                    },
+                  ].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={1400}
+                        height={900}
+                        className="h-64 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
+          </article>
 
-            <div>
-              <h4 className="font-semibold">Technologies</h4>
+          {/* PERSONAL PROJECT 3 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  03 — WORDPRESS WEBSITE
+                </p>
 
-              <p className="mt-3 leading-7 text-gray-600">
-                WordPress · WPForms · PHP · Webhooks · CyberFolks Hosting
-              </p>
+                <h3 className="mt-3 text-3xl font-semibold">
+                  WordPress Business Website
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Responsive business website created for a joinery business
+                  to present the company, its products and provide customers
+                  with an easy way to submit inquiries.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The website provides customers with information about the
+                    business and its product offering, together with a contact
+                    form for submitting customer inquiries.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    I built the website using WordPress and WPForms and later
+                    connected the inquiry form to the AI Lead-to-Quote
+                    Automation through webhooks, allowing submitted inquiries
+                    to enter the automated processing workflow.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Responsive Website",
+                    "Business Presentation",
+                    "Product Presentation",
+                    "Customer Inquiry Form",
+                    "WPForms",
+                    "Webhook Integration",
+                    "AI Workflow Integration",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+
+                <p className="mt-3 leading-7 text-gray-600">
+                  WordPress · WPForms · PHP · Webhooks · CyberFolks Hosting
+                </p>
+              </div>
+
+              <div>
+                <h4 className="mb-5 font-semibold">Application Preview</h4>
+
+                <div className="flex flex-wrap items-start justify-center gap-4">
+                  {[
+                    {
+                      src: "/projekt3_1.png",
+                      alt: "WordPress business website homepage",
+                    },
+                    {
+                      src: "/projekt3_2.png",
+                      alt: "Product offering on the WordPress website",
+                    },
+                    {
+                      src: "/projekt2_wordpress.png",
+                      alt: "Customer inquiry form",
+                    },
+                  ].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={1200}
+                        height={800}
+                        className="h-64 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
-
       </section>
 
+      {/* UNIVERSITY PROJECTS */}
+      <section
+        id="university-projects"
+        className="mx-auto max-w-6xl px-6 py-24 md:px-10"
+      >
+        <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
+          Academic Work
+        </p>
+
+        <h2 className="text-4xl font-semibold md:text-5xl">
+          University Projects
+        </h2>
+
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+          Selected projects developed during my studies, focused on applying
+          software engineering concepts and technologies in practice.
+        </p>
+
+        <div className="mt-12 space-y-8">
+          {/* UNIVERSITY PROJECT 1 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  01 — BACHELOR THESIS
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold">
+                  SmartZone — Android Application & Software Testing
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Android application developed as part of my bachelor thesis,
+                  with a focus on systematic software testing and quality
+                  assurance.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    SmartZone is an Android application designed to support
+                    users in organizing their learning activities. Users can
+                    create personalized Study Zones, manage notes and
+                    documents, plan tasks and reminders, and manage their user
+                    profile.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The application was developed in Kotlin with Firebase
+                    Authentication and Cloud Firestore. The thesis focused on
+                    systematic software testing using unit tests with JUnit
+                    and Mockito, Firebase integration tests and UI tests with
+                    Espresso.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "User Authentication",
+                    "Study Zones",
+                    "Notes & Documents",
+                    "Planner & Reminders",
+                    "User Profile",
+                    "Unit Testing",
+                    "Integration Testing",
+                    "UI Testing",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+
+                <p className="mt-3 leading-7 text-gray-600">
+                  Kotlin · Android Studio · Firebase Authentication · Cloud
+                  Firestore · AlarmManager · JUnit 4 · Mockito ·
+                  Mockito-Kotlin · Espresso
+                </p>
+              </div>
+
+              <div>
+                <h4 className="mb-5 font-semibold">Application Preview</h4>
+
+                <div className="flex flex-wrap items-start justify-center gap-4">
+                  {[
+                    {
+                      src: "/smartzone_zones.png",
+                      alt: "SmartZone Study Zones screen",
+                    },
+                    {
+                      src: "/smartzone_zone_details.png",
+                      alt: "SmartZone Study Zone details",
+                    },
+                    {
+                      src: "/smartzone_planner.png",
+                      alt: "SmartZone planner and reminders",
+                    },
+                  ].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={900}
+                        height={1200}
+                        className="h-64 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* UNIVERSITY PROJECT 2 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  02 — DATABASE & WEB APPLICATION
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold">
+                  Restaurant Recommendation Web Application
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Crowdsourced restaurant recommendation web application
+                  combining relational, spatial, temporal and semi-structured
+                  data within a PostgreSQL database.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The application allows users to discover restaurants, add
+                    new locations and share reviews. Restaurants can be
+                    searched and ranked based on location, ratings and recent
+                    activity.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    PostgreSQL is used as the main database, PostGIS handles
+                    geographic locations and distance-based queries, while
+                    JSONB stores flexible restaurant attributes. Spatial GiST
+                    and JSONB GIN indexes improve query performance, while
+                    triggers maintain aggregated restaurant statistics.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "User Authentication",
+                    "Restaurant Management",
+                    "Restaurant Reviews",
+                    "Spatial Search",
+                    "Distance Calculation",
+                    "JSONB Filtering",
+                    "Trending Restaurants",
+                    "Automatic Statistics",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+
+                <p className="mt-3 leading-7 text-gray-600">
+                  Python · Flask · PostgreSQL · PostGIS · JSONB · SQL ·
+                  PL/pgSQL · psycopg · Bootstrap
+                </p>
+              </div>
+
+              <div>
+                <h4 className="mb-5 font-semibold">Application Preview</h4>
+
+                <div className="flex flex-wrap items-start justify-center gap-4">
+                  {[
+                    {
+                      src: "/restaurant_add.png",
+                      alt: "Adding a restaurant with additional attributes",
+                    },
+                    {
+                      src: "/restaurant_search.png",
+                      alt: "Spatial restaurant search with JSONB filters",
+                    },
+                    {
+                      src: "/restaurant_trending.png",
+                      alt: "Trending restaurants based on recent activity",
+                    },
+                  ].map((image) => (
+                    <div
+                      key={image.src}
+                      className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={1200}
+                        height={800}
+                        className="h-64 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* UNIVERSITY PROJECT 3 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  03 — EXPERT SYSTEM
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold">
+                  Creditworthiness Assessment Expert System
+                </h3>
+
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Rule-based expert system for creditworthiness assessment
+                  developed using declarative programming, logical reasoning
+                  and F-logic.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The system models clients, loan applications and bank
+                    policies to evaluate creditworthiness. Based on financial
+                    data and predefined business rules, it determines whether
+                    a loan application should be approved, conditionally
+                    approved or rejected.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The system represents domain knowledge through facts and
+                    declarative rules rather than a traditional procedural
+                    algorithm. Flora-2 and F-logic are used to model the domain
+                    and perform logical reasoning, with the schema, reasoning
+                    rules and test data organized into separate modules.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Creditworthiness Assessment",
+                    "Rule-Based Reasoning",
+                    "Financial Indicators",
+                    "DSTI Calculation",
+                    "Business Rule Validation",
+                    "Credit Classification",
+                    "Decision Explanation",
+                    "Test Queries",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+
+                <p className="mt-3 leading-7 text-gray-600">
+                  Flora-2 · F-logic · XSB Prolog · Declarative Programming ·
+                  Logic Programming · Ubuntu Linux
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* CONTACT */}
       <section
         id="contact"
         className="mx-auto max-w-6xl px-6 py-24 md:px-10"
