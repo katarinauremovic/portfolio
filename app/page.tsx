@@ -158,6 +158,7 @@ export default function Home() {
               <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   "C#",
+                  "WPF",
                   ".NET",
                   "Python",
                   "Kotlin",
@@ -186,6 +187,8 @@ export default function Home() {
               <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   "PostgreSQL",
+                  "MySQL",
+                  "SQLite",
                   "SQL",
                   "PostGIS",
                   "JSONB",
@@ -684,12 +687,80 @@ export default function Home() {
         </p>
 
         <div className="mt-12 space-y-8">
-          {/* UNIVERSITY PROJECT 1 */}
+          {/* UNIVERSITY PROJECT 1 — GLAMOFFICE */}
           <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-sm font-medium text-gray-400">
-                  01 — BACHELOR THESIS
+                  01 — C# DESKTOP APPLICATION
+                </p>
+                <h3 className="mt-3 text-3xl font-semibold">
+                  GlamOffice Software
+                </h3>
+                <p className="mt-3 max-w-3xl text-lg text-gray-600">
+                  Three-tier desktop application developed in a four-member university team to support beauty salon operations.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold">The Project</h4>
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The application supports beauty salon management, including services, clients, appointments and customer communication.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">My Contribution</h4>
+                  <p className="mt-3 leading-7 text-gray-600">
+                    I worked on CRUD functionality for salon services, customer reviews and employee ratings, and promotional emails for customers.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technical Approach</h4>
+                <p className="mt-3 leading-7 text-gray-600">
+                  Developed using C# and WPF within the .NET ecosystem, following a three-tier architecture. The team worked with SQLite and MySQL databases and used Git for version control and collaboration.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Service Management (CRUD)",
+                    "Customer Reviews",
+                    "Employee Ratings",
+                    "Promotional Emails",
+                    "Three-Tier Architecture",
+                    "Database Integration",
+                    "Team Collaboration",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
+                <p className="mt-3 leading-7 text-gray-600">
+                  C# · WPF · .NET · SQLite · MySQL · Git · GitHub
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* UNIVERSITY PROJECT 2 — SMARTZONE */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  02 — BACHELOR THESIS
                 </p>
 
                 <h3 className="mt-3 text-3xl font-semibold">
@@ -799,12 +870,12 @@ export default function Home() {
             </div>
           </article>
 
-          {/* UNIVERSITY PROJECT 2 */}
+          {/* UNIVERSITY PROJECT 3 */}
           <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-sm font-medium text-gray-400">
-                  02 — DATABASE & WEB APPLICATION
+                  03 — DATABASE & WEB APPLICATION
                 </p>
 
                 <h3 className="mt-3 text-3xl font-semibold">
@@ -912,12 +983,12 @@ export default function Home() {
             </div>
           </article>
 
-          {/* UNIVERSITY PROJECT 3 */}
+          {/* UNIVERSITY PROJECT 4 */}
           <article className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10">
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-sm font-medium text-gray-400">
-                  03 — EXPERT SYSTEM
+                  04 — EXPERT SYSTEM
                 </p>
 
                 <h3 className="mt-3 text-3xl font-semibold">
