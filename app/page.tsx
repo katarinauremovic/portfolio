@@ -1,96 +1,107 @@
-import Image from "next/image";
+                  </p>
+                </div>
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#f7f7f5] text-[#111111]">
-      {/* NAVIGATION */}
-      <nav className="fixed left-0 top-0 z-50 w-full border-b border-gray-200 bg-[#f7f7f5]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-          <a href="#" className="font-semibold">
-            Katarina Uremović
-          </a>
+                <div>
+                  <h4 className="font-semibold">Technical Approach</h4>
 
-          <div className="hidden items-center gap-8 text-sm text-gray-600 md:flex">
-            <a href="#about" className="transition hover:text-black">
-              About
-            </a>
+                  <p className="mt-3 leading-7 text-gray-600">
+                    The system represents domain knowledge through facts and
+                    declarative rules rather than a traditional procedural
+                    algorithm. Flora-2 and F-logic are used to model the domain
+                    and perform logical reasoning, with the schema, reasoning
+                    rules and test data organized into separate modules.
+                  </p>
+                </div>
+              </div>
 
-            <a
-              href="#personal-projects"
-              className="transition hover:text-black"
-            >
-              Personal Projects
-            </a>
+              <div>
+                <h4 className="font-semibold">Key Features</h4>
 
-            <a
-              href="#university-projects"
-              className="transition hover:text-black"
-            >
-              University Projects
-            </a>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Creditworthiness Assessment",
+                    "Rule-Based Reasoning",
+                    "Financial Indicators",
+                    "DSTI Calculation",
+                    "Business Rule Validation",
+                    "Credit Classification",
+                    "Decision Explanation",
+                    "Test Queries",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-            <a href="#contact" className="transition hover:text-black">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+              <div>
+                <h4 className="font-semibold">Technologies</h4>
 
-      {/* HERO */}
-      <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-10">
-        <div>
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
-            Portfolio
-          </p>
-
-          <h1 className="text-5xl font-semibold leading-tight md:text-7xl">
-            Katarina Uremović
-          </h1>
-
-          <p className="mt-3 text-lg font-medium text-gray-500">
-            univ. bacc. inf.
-          </p>
-
-          <h2 className="mt-8 max-w-xl text-2xl font-medium leading-snug md:text-3xl">
-            Learning, building, and solving real-world problems through technology.
-          </h2>
-
-          <p className="mt-5 max-w-xl text-lg leading-8 text-gray-600">
-            I enjoy exploring different areas of IT, learning new technologies and applying them to practical projects.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#personal-projects"
-              className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
-            >
-              View My Projects
-            </a>
-
-            <a
-              href="#contact"
-              className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium transition hover:bg-gray-50"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-
-        <div className="flex justify-center md:justify-end">
-          <Image
-            src="/moja_slika.png"
-            alt="Katarina Uremović"
-            width={400}
-            height={500}
-            className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
-            priority
-          />
+                <p className="mt-3 leading-7 text-gray-600">
+                  Flora-2 · F-logic · XSB Prolog · Declarative Programming ·
+                  Logic Programming · Ubuntu Linux
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-
-      {/* ABOUT */}
+      {/* CONTACT */}
       <section
-        id="about"
+        id="contact"
         className="mx-auto max-w-6xl px-6 py-24 md:px-10"
       >
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-12">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
+            Contact
+          </p>
+
+          <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
+            Let's connect
+          </h2>
+
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+            Feel free to contact me or explore my work on GitHub and LinkedIn.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="mailto:kuremovic309@gmail.com"
+              className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800"
+            >
+              Email Me
+            </a>
+
+            <a
+              href="https://github.com/katarinauremovic"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium transition hover:bg-gray-50"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/katarina-uremovi%C4%87/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium transition hover:bg-gray-50"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <footer className="mt-12 flex flex-col gap-2 border-t border-gray-200 pt-6 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Katarina Uremović</p>
+          <p>Built with Next.js & Tailwind CSS</p>
+        </footer>
+      </section>
+    </main>
+  );
+}
