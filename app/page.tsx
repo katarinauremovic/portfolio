@@ -52,7 +52,7 @@ export default function Home() {
           </p>
 
           <h2 className="mt-8 max-w-xl text-2xl font-medium leading-snug md:text-3xl">
-            Turning real-world problems into practical digital solutions.
+            Learning, building, and solving real-world problems through technology.
           </h2>
 
           <p className="mt-5 max-w-xl text-lg leading-8 text-gray-600">
@@ -109,143 +109,25 @@ export default function Home() {
 
           <div className="flex flex-col justify-center">
             <p className="text-lg leading-8 text-gray-600">
-              I am a Bachelor of Informatics currently pursuing a Master's degree
-              focused on databases and knowledge bases. Through my studies, I have
-              gained a foundation in software development, databases and other areas
-              of information technology.
+              I am a Bachelor of Informatics currently pursuing a Master's degree in Databases and Knowledge Bases at the Faculty of Organization and Informatics in Varaždin.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              Alongside my studies, I started working on personal projects inspired
-              by real business needs. These projects gave me the opportunity to
-              apply my knowledge in practice and explore how technology can be used
-              to solve real problems, improve existing processes and support
-              everyday business activities.
+              Through academic and personal projects, I have gained practical experience in software development, databases, testing, and process automation. I particularly enjoy working on projects inspired by real business needs and exploring how technology can simplify processes and solve practical problems.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              Working on practical projects strengthened my motivation to take the
-              next step toward professional work in IT. I am interested in applying
-              my knowledge in a professional environment, gaining hands-on
-              experience and contributing to real projects.
-            </p>
-
-            <p className="mt-5 text-lg leading-8 text-gray-600">
-              I am open to different opportunities within IT that match my current
-              knowledge and skills, where I can continue learning, contribute to a
-              team and further develop my technical experience.
+              I am now looking for an opportunity to gain professional experience through an internship, with the possibility of continuing as a student employee and potentially transitioning into a full-time role after graduation. I am open to different areas of IT where I can contribute, learn from experienced professionals, and further develop my skills.
             </p>
           </div>
         </div>
 
-        {/* SKILLS */}
-        <div className="mt-24">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
-            Skills & Technologies
-          </p>
-
-          <h2 className="text-3xl font-semibold md:text-4xl">
-            Technologies I have worked with
-          </h2>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {/* DEVELOPMENT */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                Development
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "C#",
-                  "WPF",
-                  ".NET",
-                  "Python",
-                  "Kotlin",
-                  "JavaScript",
-                  "TypeScript",
-                  "PHP",
-                  "React",
-                  "Next.js",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* DATABASES & BACKEND */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                Databases & Backend
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "PostgreSQL",
-                  "MySQL",
-                  "SQLite",
-                  "SQL",
-                  "PostGIS",
-                  "JSONB",
-                  "Supabase",
-                  "Firebase",
-                  "Cloud Firestore",
-                  "PL/pgSQL",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* TESTING & QA */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                Testing & QA
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "Unit Testing",
-                  "Integration Testing",
-                  "UI Testing",
-                  "JUnit 4",
-                  "Mockito",
-                  "Espresso",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* WEB & APIs */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                Web & APIs
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
+                      <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   "REST APIs",
                   "HTTP",
                   "JSON",
                   "Webhooks",
-                  "WordPress",
-                  "WPForms",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -294,6 +176,8 @@ export default function Home() {
                   "Android Studio",
                   "Figma",
                   "Vercel",
+                  "WordPress",
+                  "WPForms",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -322,7 +206,7 @@ export default function Home() {
         </h2>
 
         <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-          Projects inspired by real business needs, developed to explore how technology can solve practical problems and improve existing processes.
+          Three connected projects inspired by a real business workflow, from collecting customer inquiries through AI-assisted processing to preparing and managing quotes.
         </p>
 
         <div className="mt-12 space-y-8">
@@ -349,9 +233,7 @@ export default function Home() {
                   <h4 className="font-semibold">The Project</h4>
 
                   <p className="mt-3 leading-7 text-gray-600">
-                    The application centralizes the quote creation process and
-                    helps keep customer information, quote items, pricing and
-                    quote statuses organized in one place.
+                    The application centralizes the quote creation process and helps keep customer information, quote items, pricing and quote statuses organized in one place. It also supports reviewing quote drafts prepared from customer inquiries by the AI Lead-to-Quote Automation workflow.
                   </p>
                 </div>
 
@@ -473,11 +355,7 @@ export default function Home() {
                   <h4 className="font-semibold">Technical Approach</h4>
 
                   <p className="mt-3 leading-7 text-gray-600">
-                    Customer inquiries are received from a WordPress form
-                    through a webhook and processed in n8n. AI extracts
-                    structured information, the output is validated and stored
-                    in Supabase, while uncertain or missing information remains
-                    available for human review.
+                   Customer inquiries are received from a WordPress form through a webhook and processed in n8n. AI extracts structured information, the output is validated and stored in Supabase, while uncertain or missing information remains available for human review. The workflow connects the WordPress Business Website with my Quote Management Web Application, where the prepared quote can be reviewed.
                   </p>
                 </div>
               </div>
